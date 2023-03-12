@@ -10,22 +10,22 @@ export const N4 = Succ(N3);
 export const N5 = Succ(N4);
 
 export const ToJSNumber = (n: Func) => {
-    let i = 0;
+  let i = 0;
 
-    while (!ToJSBool(Eq(n)(N0))) {
-        n = Pred(n);
-        i++;
-    }
+  while (!ToJSBool(Eq(n)(N0))) {
+    n = Pred(n);
+    i++;
+  }
 
-    return i;
+  return i;
 };
 
 export const FromJSNumber = (n: number) => {
-    let f = N0;
+  let f = N0;
 
-    for (let i = 0; i < n; i++) {
-        f = Succ(f);
-    }
+  for (let i = 0; i < n; i++) {
+    f = Succ(f);
+  }
 
-    return f;
+  return f;
 };

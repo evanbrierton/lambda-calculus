@@ -3,6 +3,6 @@ import { ToJSBool } from "../lib/booleans.ts";
 import { Func } from "../lib/types.ts";
 
 export const assertBoolean = (lambda_boolean: Func, expected: boolean) => {
-    const actual = ToJSBool(lambda_boolean);
-    assert(actual === expected);
+  const actual = ToJSBool(lambda_boolean);
+  assert(actual === expected);
 };
