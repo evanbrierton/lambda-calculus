@@ -1,6 +1,5 @@
-import { assertEquals as rawAssertEquals } from "https://deno.land/std@0.178.0/testing/asserts.ts";
 import { Add, Eq, Gt, Is0, Leq, Mult, Pow, Pred, Sub, Succ } from "../lib/arithmetic.ts";
-import { FromJSNumber, N0, N1, N2, N3, N4, N5, ToJSNumber } from "../lib/numerals.ts";
+import { FromJSNumber, N0, N1, N2, N3, N4, N5 } from "../lib/numerals.ts";
 import { assert, assertFalse, assertNumberEqual } from "./asserts.ts";
 
 Deno.test(function succTest() {

@@ -1,6 +1,6 @@
 import { assert } from "https://deno.land/std@0.178.0/testing/asserts.ts";
 import { I, K, KI, M } from "../lib/combinators.ts";
-import { FromJSNumber, N0, N1, N2, N3, N4, N5, ToJSNumber } from "../lib/numerals.ts";
+import { FromJSNumber, N0, N1, N2, N3, N4, N5 } from "../lib/numerals.ts";
 import { Fst, Pair, Phi, Set1st, Set2nd, Snd } from "../lib/pairs.ts";
 import { Func } from "../lib/types.ts";
 import { assertNumberEqual } from "./asserts.ts";
