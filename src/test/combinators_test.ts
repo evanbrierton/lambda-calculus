@@ -1,7 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.178.0/testing/asserts.ts";
 import { Not, T } from "../lib/booleans.ts";
 import { B, C, I, K, KI, M } from "../lib/combinators.ts";
-import { assertBoolean } from "./asserts.ts";
+import { assert } from "./asserts.ts";
 
 Deno.test(function identityTest() {
   assertEquals(I(I), I);
@@ -26,5 +26,5 @@ Deno.test(function cardinalTest() {
 });
 
 Deno.test(function bluebirdTest() {
-  assertBoolean(B(Not)(Not)(T), true);
+  assert(B(Not)(Not)(T));
 });
