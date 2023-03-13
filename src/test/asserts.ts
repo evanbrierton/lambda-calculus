@@ -1,8 +1,16 @@
-import { assert } from "https://deno.land/std@0.178.0/testing/asserts.ts";
+import { assert as booleanAssert, assertEquals, assertFalse as booleanAssertFalse } from "https://deno.land/std@0.178.0/testing/asserts.ts";
 import { ToJSBool } from "../lib/booleans.ts";
+import { ToJSNumber } from "../lib/numerals.ts";
 import { Func } from "../lib/types.ts";
 
-export const assertBoolean = (lambda_boolean: Func, expected: boolean) => {
-  const actual = ToJSBool(lambda_boolean);
-  assert(actual === expected);
+export const assert = (actual_lambda: Func) => {
+  booleanAssert(ToJSBool(actual_lambda));
+};
+
+export const assertFalse = (actual_lambda: Func) => {
+  booleanAssertFalse(ToJSBool(actual_lambda));
+};
+
+export const assertNumberEqual = (actual: Func, expected: Func) => {
+  assertEquals(ToJSNumber(actual), ToJSNumber(expected));
 };
